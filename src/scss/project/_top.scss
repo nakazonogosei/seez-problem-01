@@ -1,0 +1,93 @@
+@use "../global" as *;
+
+.p-top {
+  width: 100%;
+  padding: 60px 0 100px;
+  // background-color: rgb(148, 255, 255);
+  background:linear-gradient(rgb(244, 255, 255), rgb(0, 255, 255));
+  line-height: 1.5;
+  &__inner {
+    max-width: 600px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 50px;
+    color: rgb(24, 19, 19);
+  }
+  &__title {
+    position: relative;
+    font-size: 5rem;
+    text-align: center;
+  }
+  &__coder-name {
+    display: inline-block;
+    position: absolute;
+    bottom: 0;
+    right: -1em;
+    font-size: 1.6rem;
+
+  }
+  &__sub-title {
+    margin-top: 50px;
+    font-size: 2rem;
+    text-align: center;
+  }
+  &__list {
+    margin-top: 20px;
+  }
+  &__item {
+    & + & {
+      margin-top: 20px;
+    }
+  }
+  &__input {
+    display: block;
+    width: calc(100% - 11em);
+    background-color: #fff;
+    color: black;
+    font-size: 2rem;
+    padding: 4px 10px;
+    min-height: calc(1em + 24px);
+  }
+  &__label-wrapper {
+    margin-top: 16px;
+  }
+  &__label {
+    display: flex;
+  }
+  &__key {
+    display: inline-block;
+    width: 11em;
+    color: black;
+    font-size: 2rem;
+    text-align: right;
+    padding-right: 8px;
+  }
+  .button-write {
+    display: block;
+    width: 300px;
+    background-color: blue;
+    color: #fff;
+    font-weight: bold;
+    padding: 6px;
+    text-align: center;
+    font-size: 2rem;
+    margin: 6px auto 0;
+    transition: color .3s, background-color .3s;
+    border: 2px solid blue;
+    &:hover {
+      background-color: #fff;
+      color: blue;
+    }
+    &.mt20 {
+      margin-top: 20px;
+    }
+  }
+  &__message-area {
+    margin-top: 10px;
+  }
+  .done-message {
+    font-size: 1.8rem;
+    color: rgb(201, 13, 13);
+    text-align: center;
+  }
+}
