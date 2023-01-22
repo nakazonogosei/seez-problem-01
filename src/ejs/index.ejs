@@ -1,7 +1,7 @@
 <% const pageInfo = {
   url: "/",
-  <!-- path: "/codingkadai/01/nakazono/" -->
-  path: "/"
+  path: "/codingkadai/01/nakazono/"
+  <!-- path: "/" -->
 };
 -%>
 <!DOCTYPE html>
@@ -13,64 +13,67 @@
       <h1 class="p-top__title">Seez課題01
         <span class="p-top__coder-name">by Nakazono</span>
       </h1>
-      <p class="p-top__sub-title">
-        サーバー内の JSON ファイルに書き込みたい<br>
-        好きなお笑い芸人の芸名と<br>所属ユニット名を入力してください！
-      </p>
-      <ul class="p-top__list">
-        <li class="p-top__item">
-          <label class="p-top__label" for="key">
-            <span class="p-top__key">芸名：</span>
-            <input type="text" name="key" id="input1" value="" class="p-top__input input1" />
-          </label>
-        </li>
-        <li class="p-top__item">
-          <label class="p-top__label" for="value">
-            <span class="p-top__key">所属ユニット名：</span>
-            <input type="text" name="value" id="input2" value="" class="p-top__input input2" />
-          </label>
-        </li>
-      </ul>
 
-      <p class="p-top__sub-title">
-        サーバー内の JSON ファイルに
-      </p>
-      <!-- <button type="submit" id="write" value="書き込みする" class="button-write" onclick="clickBtn1()" /></button> -->
-      <input type="button" id="write" value="書き込みする" class="button-write" />
-      <div class="p-top__message-area">
-        <p id="done1" class="done-message"></p>
-        <p id="done2" class="done-message"></p>
-      </div>
+      <form id="my-form">
+        <p class="p-top__sub-title">
+          サーバー内の JSON ファイルに書き込みたい<br>
+          好きなお笑い芸人の芸名と<br>所属ユニット名を入力してください！
+        </p>
+        <ul class="p-top__list">
+          <li class="p-top__item">
+            <label class="p-top__label" for="key">
+              <span class="p-top__key">芸名：</span>
+              <input type="text" name="key" id="input1" value="" class="p-top__input input1" />
+            </label>
+          </li>
+          <li class="p-top__item">
+            <label class="p-top__label" for="value">
+              <span class="p-top__key">所属ユニット名：</span>
+              <input type="text" name="value" id="input2" value="" class="p-top__input input2" />
+            </label>
+          </li>
+        </ul>
 
-      <p class="p-top__sub-title">
-        書き込んだ JSON ファイルの中から<br>
-        芸人の 所属ユニット名 が確認できます！<br>
-        任意の 芸名 を入力して<br>
-        「表示する」ボタンを押して確認してください！
-      </p>
-      <ul class="p-top__list">
-        <li class="p-top__item">
-          <label class="p-top__label" for="keycomfirm">
-            <span class="p-top__key">芸名：</span>
-            <input type="text" name="keycomfirm" id="input3" value="" class="p-top__input input3" />
-          </label>
-        </li>
-      </ul>
-      <input type="button" id="write" value="表示する" class="button-write mt20" />
-      <ul class="p-top__list">
-        <li class="p-top__item">
-          <label class="p-top__label" for="text2">
-            <span class="p-top__key">所属ユニット名：</span>
-            <p class="p-top__input "></p>
-          </label>
-        </li>
-      </ul>
+        <p class="p-top__sub-title">
+          サーバー内の JSON ファイルに
+        </p>
+        <button type="submit" id="write" class="button-write" name="submit" />書き込みする</button>
+        <div class="p-top__message-area">
+          <p id="done1" class="done-message"></p>
+          <p id="done2" class="done-message"></p>
+        </div>
 
-      <p class="p-top__sub-title">
-        書き込みを行った<br>
-        サーバー内の JSON ファイルを<br>
-      </p>
-      <input type="button" id="download" value="ダウンロードする" class="button-write" />
+        <p class="p-top__sub-title">
+          書き込んだ JSON ファイルの中から<br>
+          芸人の 所属ユニット名 が確認できます！<br>
+          任意の 芸名 を入力して<br>
+          「表示する」ボタンを押して確認してください！
+        </p>
+        <ul class="p-top__list">
+          <li class="p-top__item">
+            <label class="p-top__label" for="keycomfirm">
+              <span class="p-top__key">芸名：</span>
+              <input type="text" name="keycomfirm" id="input3" value="" class="p-top__input input3" />
+            </label>
+          </li>
+        </ul>
+        <input type="button" id="write" value="表示する" class="button-write mt20" />
+        <ul class="p-top__list">
+          <li class="p-top__item">
+            <label class="p-top__label" for="text2">
+              <span class="p-top__key">所属ユニット名：</span>
+              <p class="p-top__input "></p>
+            </label>
+          </li>
+        </ul>
+
+        <p class="p-top__sub-title">
+          書き込みを行った<br>
+          サーバー内の JSON ファイルを<br>
+        </p>
+        <input type="button" id="download" value="ダウンロードする" class="button-write" />
+      </form>
+
     </div>
   </main>
   <script defer src="<%= pageInfo.path %>assets/js/bundle.js"></script>
