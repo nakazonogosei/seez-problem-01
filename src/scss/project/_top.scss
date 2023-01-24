@@ -90,4 +90,13 @@
     color: rgb(201, 13, 13);
     text-align: center;
   }
+  &__image {
+    margin-top: 100px;
+    text-align: center;
+    img {
+      width: 400px;
+      // filter: drop-shadow(0 3px 6px rgba(0, 0, 0, .16));
+      filter: drop-shadow(0 3px 6px #000);
+    }
+  }
 }

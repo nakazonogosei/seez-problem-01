@@ -6,10 +6,10 @@
 // テストアップ時にパス切り替え （ココと、index.ejsを変更する）
 
 // テストアップ時
-const rootPath = "/codingkadai/01/nakazono/";
+// const rootPath = "/codingkadai/01/nakazono/";
 
 // ローカル環境
-// const rootPath = "/";
+const rootPath = "/";
 
 // JSONファイルまでのパス
 const jsonPath = rootPath + "assets/json/comedian.json";
@@ -60,7 +60,7 @@ function writeBtn1() {
 
     console.log(JSON.stringify(formData));
     console.log("いまからFetch");
-    
+
     // Fetch APIを使ってエンドポイントにPOSTリクエストを送信
     fetch(submitPath, {
       method: "POST",

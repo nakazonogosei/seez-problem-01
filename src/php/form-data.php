@@ -1,9 +1,9 @@
 <?php
   // テストアップ時
-  $rootPath = "/codingkadai/01/nakazono/assets/";
+  // $rootPath = "/codingkadai/01/nakazono/assets/";
 
   // ローカル環境
-  // $rootPath = "/assets/";
+  $rootPath = "/assets/";
 
   $json_filename = "json/comedian.json";
   // $php_filename = "php/form-data.php";
