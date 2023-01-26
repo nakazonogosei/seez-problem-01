@@ -12,7 +12,7 @@ const test2 = function() {
 }
 console.log(test2);
 
-// 変数、定数
+// 変数、定数 (アロー関数)
 const test3 = () => {
   return "関数3";
 }
@@ -50,9 +50,58 @@ const promiseTest2 = new Promise( ok => {
 // functionは使われてないので()は要らない
 console.log(promiseTest2);
 
-function testPromise3(input) { // インプットがあるパターン
+function PromiseTest3(input) { // インプットがあるパターン
   return new Promise( ok => {
     ok(`プロミスは${input}です`);
   });
 }
-console.log(testPromise3("太郎"));
+console.log(PromiseTest3("太郎"));
+
+function promiseTest4A(pay) {
+  return new Promise(ok => {
+    let change = pay - 100;
+    ok(change);
+  })
+}
+console.log(promiseTest4A(300));
+
+// エラーがでる書き方
+function promiseTest4B(pay) {
+  return new Promise((ok, ng) => {
+    if(pay > 100) {
+      let change = pay - 100;
+      ok(change);
+    }
+    ng("お金がたりません");
+  })
+}
+console.log(promiseTest4B(80));
+// [PromiseState]]:"rejected" とコンソールに表示される
+// エラーを捕まえきれていないという意味
+
+// エラーがでない書き方
+function promiseTest4C(pay) {
+  return new Promise((ok, ng) => {
+    if(pay > 100) {
+      let change = pay - 100;
+      ok(change);
+    }
+    ng("お金がたりません");
+  })
+}
+console.log(promiseTest4C(80).catch( e => {console.log(e)}));
+// "お金がたりません" とコンソールに表示される
+
+promiseTest4C(180).then( change1 => {
+  console.log(change1);
+  return promiseTest4C(change1);
+}).then(change2 => {
+  console.log(change2);
+}).catch(e => console.log(e));
+
+// Promise チェーン
+// Promise .then(ok_callback, ng_callback)
+// Promise .then((ok_value) => {}, (ng_reason) => {})
+
+// Promise .catch(ng_callback) // NG は catch
+// Promise .catch((ng_reason) => {}) // NG は catch
