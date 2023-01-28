@@ -136,5 +136,4 @@ module.exports = () => ({
     hot: true
   },
   target: "web"
-  // target: "node"
 });
