@@ -115,7 +115,7 @@ module.exports = () => ({
     }),
     new CopyPlugin({
       patterns: [
-        { from: "src/json/", to: "assets/json/" },
+        { from: "src/json/", to: "" },
         { from: "src/php/", to: "" },
         { from: "src/images/", to: "assets/images/" }
         // { from: "src/pdf/", to: "assets/pdf/" },

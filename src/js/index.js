@@ -1,3 +1,3 @@
 import "jquery";
 import "./main";
-import "./promise";
+// import "./promise";
