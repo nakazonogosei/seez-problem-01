@@ -1,0 +1,10 @@
+version: "3.8"
+
+services:
+  php:
+    image: php:7.4-apache
+    volumes:
+      - ./dist:/var/www/html
+      - ./php/php.ini:/usr/local/etc/php/conf.d/php-edit.ini
+    ports:
+      - 8080:80
