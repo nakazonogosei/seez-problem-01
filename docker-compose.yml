@@ -1,0 +1,9 @@
+version: "3.8"
+
+services:
+  php:
+    image: php:7.4-apache
+    volumes:
+      - ./dist:/var/www/html
+    ports:
+      - 8080:80

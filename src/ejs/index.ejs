@@ -23,13 +23,13 @@
           <li class="p-top__item">
             <label class="p-top__label" for="key">
               <span class="p-top__key">芸名：</span>
-              <input type="text" name="key" id="input1" value="" class="p-top__input input1" />
+              <input type="text" name="name" id="input1" value="" class="p-top__input input1" />
             </label>
           </li>
           <li class="p-top__item">
             <label class="p-top__label" for="value">
               <span class="p-top__key">所属ユニット名：</span>
-              <input type="text" name="value" id="input2" value="" class="p-top__input input2" />
+              <input type="text" name="unit" id="input2" value="" class="p-top__input input2" />
             </label>
           </li>
         </ul>
@@ -42,6 +42,7 @@
           <p id="done1" class="done-message"></p>
           <p id="done2" class="done-message"></p>
         </div>
+      </form>
 
         <p class="p-top__sub-title">
           書き込んだ JSON ファイルの中から<br>
@@ -57,7 +58,7 @@
             </label>
           </li>
         </ul>
-        <input type="button" id="write" value="表示する" class="button-write mt20" />
+        <input type="button" id="display" value="表示する" class="button-write mt20" />
         <ul class="p-top__list">
           <li class="p-top__item">
             <label class="p-top__label" for="text2">
@@ -72,7 +73,11 @@
           サーバー内の JSON ファイルを<br>
         </p>
         <input type="button" id="download" value="ダウンロードする" class="button-write" />
-      </form>
+
+
+      <div class="p-top__image">
+        <img src="<%= pageInfo.path %>assets/images/henna_katachi.png" alt="">
+      </div>
 
     </div>
   </main>
